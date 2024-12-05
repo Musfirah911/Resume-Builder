@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="resume-builder">
+            <div class="input-section">
+                <h1>Resume Builder</h1>
+                
+                <!-- Personal Information Section -->
+                <div class="section personal-info">
+                    <h3>Personal Information</h3>
+                    <input type="text" id="fullName" placeholder="Full Name">
+                    <input type="tel" id="phoneNumber" placeholder="Phone Number">
+                    <input type="email" id="email" placeholder="Email">
+                    <input type="file" id="profilePic" accept="image/*">
+                </div>
+
+                <!-- Education Section -->
+                <div class="section education">
+                    <h3>Education</h3>
+                    <div id="educationEntries">
+                        <div class="entry education-entry">
+                            <input type="text" class="degree" placeholder="Degree">
+                            <input type="text" class="institute" placeholder="Institute">
+                            <input type="number" class="year" placeholder="Passing Year">
+                            <button class="remove-btn" >Remove</button>
+                        </div>
+                    </div>
+                    <button id="addEducation">+ Add Education</button>
+                </div>
+
+                <!-- Work Experience Section -->
+                <div class="section work-experience">
+                    <h3>Work Experience</h3>
+                    <div id="workEntries">
+                        <div class="entry work-entry">
+                            <input type="text" class="job-title" placeholder="Job Title">
+                            <input type="text" class="company" placeholder="Company">
+                            <textarea class="description" placeholder="Job Description"></textarea>
+                            <button class="remove-btn">Remove</button>
+                        </div>
+                    </div>
+                    <button id="addWorkExperience">+ Add Work Experience</button>
+                </div>
+
+                <!-- Skills Section -->
+                <div class="section skills">
+                    <h3>Skills</h3>
+                    <div id="skillEntries">
+                        <div class="entry skill-entry">
+                            <input type="text" class="skill-name" placeholder="Skill Name">
+                            <select class="skill-level">
+                                <option value="Beginner">Beginner</option>
+                                <option value="Intermediate">Intermediate</option>
+                                <option value="Advanced">Advanced</option>
+                            </select>
+                            <button class="remove-btn">Remove</button>
+                        </div>
+                    </div>
+                    <button id="addSkill">+ Add Skill</button>
+                </div>
+
+                <button id="generateResume">Generate Resume</button>
+            </div>
+
+            <div id="output-section" class="output-section">
+                <div class="resume-template">
+                    <div class="resume-header">
+                        <img id="outputProfilePic" src="" alt="Profile Picture">
+                        <h1 id="outputName"></h1>
+                    </div>
+                    <div class="resume-content">
+                        <div class="left-panel">
+                            <div class="contact-info">
+                                <h3>Contact</h3>
+                                <div id="outputEmail"></div>
+                                <div id="outputPhone"></div>
+                            </div>
+                            <div class="skills-section">
+                                <h3>Skills</h3>
+                                <ul id="outputSkills"></ul>
+                            </div>
+                        </div>
+                        <div class="right-panel">
+                            <div class="education-section">
+                                <h3>Education</h3>
+                                <ul id="outputEducation"></ul>
+                            </div>
+                            <div class="work-section">
+                                <h3>Work Experience</h3>
+                                <ul id="outputWorkExperience"></ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="resume-actions">
+                        <button id="editResume">Edit Resume</button>
+                        <button id="downloadPDF">Download PDF</button>
+                        <button id="shareLink">Share Link</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
